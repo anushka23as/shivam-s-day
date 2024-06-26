@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, My Love!</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(135deg, #FFD1DC, #E0F0FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .message-button {
+            width: 150px;
+            height: 150px;
+            background-color: #FFB7C5;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .message-button:hover {
+            transform: scale(1.1);
+            background-color: #FF69B4;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .modal-content {
+            background-color: #FFEFD5;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #message {
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <button class="message-button" onclick="showMessage()">💌 Click Me!</button>
+
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMessage()">&times;</span>
+            <p id="message"></p>
+        </div>
+    </div>
+
+    <script>
+        const message = `My loveliest boobie honker,
+
+Happiest birthday to my bestest sexiest and stronger than ever my cutu hubhub. Another year has passed which means you are wittier than you were a year ago which is a great gift that life gets you every year.You are most probably not as excited as everyone else on your birthday but my babe-oh-babe you has cometh a very long way and today marks another year of you being alive (which is great already, you get to live just once in your straight male sexy bod) and getting a step closer to your dreams.
+
+Your life has always been an inspiration, you brought out the changes and decided not to live the same way which is the highest step to lay your foot on to climb up that golden ladder. No one has a smooth sailing life and not everyone has the courage to bring any changes in their life. As we often say "pain is inevitable and suffering is a choice", over time you have become really acceptable of things which are out of your control and your next wise step is always "how to solve this now" which I feel is a very appreciable behaviour.
+
+Ram ji ne kabhi Sita ji ko ye nahi bola ki tumne lakshman rekha paar kyu kari, sita ji ne Ram ji se kabhi shikayat nahi kari ki itne saalo tak aaye kyu nahi. What is done is already done, what hasnt been done will be done shortly just like you farted some time ago which cant enter butt now and you will let out a big dakaar soon which is inevitable. Hence enjoy your current state of being alive.
+
+Mujhe kuch gyaan dene ki need hai nahi you know much better. I am really proud of you, how far you have come along and the honest work you put in. "When life gives you lemons, you don't make lemonade. That's for pantywaisters. No. You pucker up, suck them dry, then throw the used rinds back in life's face with a giant fuck-you and a gesture for more." I feel this describes your nature of dealing with things pretty well. my boy is god's strongest soldier and his son aint backing down any soon bitch ass nigga fuck you.
+
+You are doing great and better times are yet to come just fasten your seatbelts and we will ride through ups and downs together. you are an individualistic guy and not easily fall for conventional standards which i really admire. You are stronger than you think and i know you will get everything you seek from life. I am always going to stay with you no matter how much you poop, fart, struggle or molest me because i have a gem of a man with me and i dont want to lose a gem for a stone obv.
+
+i always look up to you and for your no bullshit and keeping-it-riyal advices. i am really grateful to have you in my life and will always be, always keep the spirits high and we both believe in you. I hope you always find a reason to smile wherever you go because life is beautiful and we are really blessed, it is much bigger than we think it is and boobie dekh ke cute to ho hi jaate ho tum waise bhi 😚😚
+
+I love you the most my future hubhub my boondi to my raita. Stay healthy, poop a little less, try not to stress a lot over things you cant control, things work out eventually we both know that and stay happy my loveliest buttercup. I'll always be proud of you.`;
+
+        function showMessage() {
+            document.getElementById('messageModal').style.display = 'block';
+            document.getElementById('message').textContent = message;
+        }
+
+        function closeMessage() {
+            document.getElementById('messageModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == document.getElementById('messageModal')) {
+                closeMessage();
+            }
+        }
+    </script>
+</body>
+</html>
